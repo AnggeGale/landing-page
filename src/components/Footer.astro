@@ -1,0 +1,181 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>TWOP</h3>
+        <p>Empowering educators with innovative technology solutions</p>
+        <div class="social-links">
+          <a href="https://twitter.com/twop" target="_blank" rel="noopener noreferrer" class="social-link">
+            <img src="/icons/twitter.svg" alt="Twitter" />
+          </a>
+          <a href="https://facebook.com/twop" target="_blank" rel="noopener noreferrer" class="social-link">
+            <img src="/icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a href="https://linkedin.com/company/twop" target="_blank" rel="noopener noreferrer" class="social-link">
+            <img src="/icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://instagram.com/twop" target="_blank" rel="noopener noreferrer" class="social-link">
+            <img src="/icons/instagram.svg" alt="Instagram" />
+          </a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="/features">Features</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/dashboard">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li>123 Education Street</li>
+          <li>San Francisco, CA 94105</li>
+          <li>+1 (555) 123-4567</li>
+          <li>support@twop.edu</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/cookies">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} TWOP. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--mantle);
+    padding: 4rem 0 2rem;
+    margin-top: auto;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-section h3 {
+    color: var(--text);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .footer-section h4 {
+    color: var(--text);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .footer-section p {
+    color: var(--subtext0);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--surface0);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+  .social-link:hover {
+    transform: translateY(-3px);
+    background: var(--surface1);
+  }
+
+  .social-link img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0.8);
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-links a {
+    color: var(--subtext0);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--blue);
+  }
+
+  .footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid var(--surface0);
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    color: var(--subtext0);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 1024px) {
+    .footer-content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      padding: 3rem 0 1.5rem;
+    }
+
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .social-links {
+      justify-content: center;
+    }
+
+    .footer-section {
+      text-align: center;
+    }
+  }
+</style>

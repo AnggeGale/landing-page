@@ -2,80 +2,329 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Contact">
-  <section class="contact-hero">
+<Layout title="Contact TWOP">
+  <section class="about-hero">
     <div class="container">
       <div class="section-header">
-        <h1>Get in Touch</h1>
-        <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        <h1 class="hero-title">Get in <span class="gradient-text">Touch</span></h1>
+        <p class="hero-description">Have questions? We're here to help you create better learning experiences</p>
       </div>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="contact-method">
+            <img src="/images/contact/location.png" alt="Office Location" />
+            <div class="method-content">
+              <h3>Visit Us</h3>
+              <p>123 Education Street</p>
+              <p>San Francisco, CA 94105</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="contact-method">
+            <img src="/images/contact/phone.png" alt="Phone Support" />
+            <div class="method-content">
+              <h3>Phone</h3>
+              <p>Call us at +1 (555) 123-4567</p>
+              <p>Mon-Fri 9:00 AM - 6:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="contact-method">
+            <img src="/images/contact/live-chat.png" alt="Live Chat" />
+            <div class="method-content">
+              <h3>Live chat</h3>
+              <p>Chat with us during working hours</p>
+              <p>Mon-Fri 8:00 AM - 5:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
     </div>
   </section>
 
-  <section class="contact-section">
+  <section class="about-content">
     <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="info-card">
-            <div class="info-icon">📍</div>
-            <h3>Visit Us</h3>
-            <p>Data Center College of the Philippines, Incorporated</p>
-            <p>123 Education Street</p>
-            <p>Manila, Philippines</p>
-          </div>
-
-          <div class="info-card">
-            <div class="info-icon">📧</div>
-            <h3>Email Us</h3>
-            <p>support@twop.edu</p>
-            <p>info@twop.edu</p>
-          </div>
-
-          <div class="info-card">
-            <div class="info-icon">📞</div>
-            <h3>Call Us</h3>
-            <p>+63 (123) 456-7890</p>
-            <p>+63 (123) 456-7891</p>
-          </div>
-
-          <div class="info-card">
-            <div class="info-icon">⏰</div>
-            <h3>Business Hours</h3>
-            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-            <p>Saturday: 9:00 AM - 1:00 PM</p>
-            <p>Sunday: Closed</p>
-          </div>
+      <div class="form-section">
+        <div class="section-header">
+          <h2>Send us a Message</h2>
+          <p>Fill out the form below and we'll get back to you shortly</p>
         </div>
-
-        <div class="contact-form-container">
-          <div class="contact-form">
-            <h2>Send us a Message</h2>
-            <form>
+        <div class="form-container">
+          <form class="contact-form" action="#" method="POST">
+            <div class="form-row">
               <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                <input type="text" id="name" name="name" placeholder="Enter your name" required />
               </div>
-
               <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required />
               </div>
-
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" required placeholder="Enter message subject">
-              </div>
-
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required placeholder="Enter your message"></textarea>
-              </div>
-
-              <button type="submit" class="submit-button">Send Message</button>
-            </form>
-          </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="demo">Request Demo</option>
+                <option value="support">Technical Support</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
         </div>
       </div>
     </div>
   </section>
-</Layout> 
+</Layout>
+
+<style>
+  .about-hero {
+    position: relative;
+    padding: 6rem 0 4rem;
+    overflow: hidden;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text);
+  }
+
+  .hero-description {
+    font-size: 1.2rem;
+    color: var(--subtext0);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, var(--mauve), var(--blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .about-card {
+    background: var(--base);
+    border: 1px solid var(--surface0);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+  }
+
+  .about-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--blue);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .contact-method {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .contact-method img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+  }
+
+  .method-content h3 {
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .method-content p {
+    color: var(--subtext0);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .hero-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .shape {
+    position: absolute;
+    background: linear-gradient(135deg, var(--mauve), var(--blue));
+    opacity: 0.1;
+    border-radius: 50%;
+  }
+
+  .shape-1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    right: -100px;
+  }
+
+  .shape-2 {
+    width: 200px;
+    height: 200px;
+    bottom: -50px;
+    left: -50px;
+  }
+
+  .shape-3 {
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    right: 15%;
+  }
+
+  .about-content {
+    padding: 6rem 0;
+    background: var(--mantle);
+  }
+
+  .form-section {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .form-container {
+    background: var(--base);
+    border: 1px solid var(--surface0);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+  }
+
+  .contact-form {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--surface0);
+    border-radius: 1rem;
+    background: var(--base);
+    color: var(--text);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .form-group textarea {
+    height: 150px;
+    resize: vertical;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(137, 180, 250, 0.1);
+  }
+
+  .submit-btn {
+    width: 100%;
+    background: var(--blue);
+    color: var(--base);
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .form-container {
+      padding: 1.5rem;
+    }
+
+    .contact-method img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+</style>

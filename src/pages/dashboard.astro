@@ -2,129 +2,366 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Dashboard">
-  <section class="dashboard-hero">
+<Layout title="Dashboard TWOP">
+  <section class="about-hero dashboard-hero">
     <div class="container">
-      <div class="section-header">
-        <h1>Teacher Dashboard</h1>
-        <p>Your central hub for managing classes and students</p>
+      <div class="section-header text-center">
+        <h1 class="hero-title">Experience Our <span class="gradient-text">Platform</span></h1>
+        <p class="hero-description">See how TWOP transforms the teaching experience with our intuitive dashboard</p>
       </div>
-    </div>
-  </section>
 
-  <section class="dashboard-preview">
-    <div class="container">
-      <div class="dashboard-grid">
-        <div class="dashboard-card">
-          <div class="card-header">
-            <div class="card-icon">📅</div>
-            <h2>Today's Schedule</h2>
-          </div>
-          <div class="schedule-list">
-            <div class="schedule-item">
-              <div class="time">8:00 AM</div>
-              <div class="class-info">
-                <h3>Mathematics</h3>
-                <p>Grade 10 - Section A</p>
-              </div>
-            </div>
-            <div class="schedule-item">
-              <div class="time">10:00 AM</div>
-              <div class="class-info">
-                <h3>Science</h3>
-                <p>Grade 10 - Section B</p>
-              </div>
-            </div>
-            <div class="schedule-item">
-              <div class="time">2:00 PM</div>
-              <div class="class-info">
-                <h3>Mathematics</h3>
-                <p>Grade 10 - Section C</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="dashboard-card">
-          <div class="card-header">
-            <div class="card-icon">⚡</div>
-            <h2>Quick Actions</h2>
-          </div>
-          <div class="action-buttons">
-            <button class="action-btn">
-              <span class="action-icon">📝</span>
-              Take Attendance
-            </button>
-            <button class="action-btn">
-              <span class="action-icon">📊</span>
-              Grade Assignments
-            </button>
-            <button class="action-btn">
-              <span class="action-icon">📋</span>
-              Create Lesson Plan
-            </button>
-            <button class="action-btn">
-              <span class="action-icon">💬</span>
-              Message Parents
-            </button>
-          </div>
-        </div>
-
-        <div class="dashboard-card">
-          <div class="card-header">
-            <div class="card-icon">📈</div>
-            <h2>Recent Activities</h2>
-          </div>
-          <div class="activity-list">
-            <div class="activity-item">
-              <span class="activity-icon">📊</span>
-              <div class="activity-info">
-                <h3>Graded Math Quiz</h3>
-                <p>Grade 10 - Section A</p>
-              </div>
-            </div>
-            <div class="activity-item">
-              <span class="activity-icon">📝</span>
-              <div class="activity-info">
-                <h3>Updated Attendance</h3>
-                <p>Grade 10 - Section B</p>
-              </div>
-            </div>
-            <div class="activity-item">
-              <span class="activity-icon">💬</span>
-              <div class="activity-info">
-                <h3>Parent Meeting</h3>
-                <p>John Doe's Parents</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="dashboard-card">
-          <div class="card-header">
-            <div class="card-icon">📊</div>
-            <h2>Class Overview</h2>
-          </div>
-          <div class="class-stats">
-            <div class="stat-item">
-              <span class="stat-label">Total Students</span>
-              <span class="stat-value">120</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-label">Attendance Rate</span>
-              <span class="stat-value">95%</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-label">Average Grade</span>
-              <span class="stat-value">85</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-label">Pending Tasks</span>
-              <span class="stat-value">3</span>
+      <div class="video-showcase">
+        <div class="video-container">
+          <video autoplay loop muted playsinline class="feature-video">
+            <source src="/videos/dashboard-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-overlay">
+            <div class="play-button">
+              <span class="gradient-text">▶</span>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="section-header text-center">
+        <h2 class="section-title">Platform <span class="gradient-text">Features</span></h2>
+        <p class="section-description">Discover the powerful tools that make teaching easier</p>
+      </div>
+
+      <div class="screenshots-grid">
+        <div class="screenshot-card">
+          <div class="screenshot-image main-screenshot">
+            <img src="/screenshots/ai-planning.png" alt="AI Lesson Planning Interface" loading="lazy" />
+          </div>
+          <div class="screenshot-content">
+            <h3>AI Lesson Planning</h3>
+            <p>Generate comprehensive lesson plans in minutes with our advanced AI technology.</p>
+            <div class="feature-screenshots">
+              <div class="mini-screenshot">
+                <img src="/screenshots/ai-planning/generation.png" alt="AI Plan Generation" loading="lazy" />
+                <p>AI-powered lesson plan generation</p>
+              </div>
+              <div class="mini-screenshot">
+                <img src="/screenshots/ai-planning/templates.png" alt="Customizable Templates" loading="lazy" />
+                <p>Customizable templates and formats</p>
+              </div>
+              <div class="mini-screenshot">
+                <img src="/screenshots/ai-planning/objectives.png" alt="Learning Objectives" loading="lazy" />
+                <p>Learning objectives alignment</p>
+              </div>
+              <div class="mini-screenshot">
+                <img src="/screenshots/ai-planning/resources.png" alt="Resource Recommendations" loading="lazy" />
+                <p>Resource recommendations</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="screenshot-card">
+          <div class="screenshot-image main-screenshot">
+            <img src="/screenshots/grading.png" alt="Auto Grading Dashboard" loading="lazy" />
+          </div>
+          <div class="screenshot-content">
+            <h3>Auto Grading System</h3>
+            <p>Streamline your grading process with intelligent automation and analytics.</p>
+            <div class="feature-screenshots">
+              <div class="mini-screenshot">
+                <img src="/screenshots/grading/scoring.png" alt="Automated Scoring" loading="lazy" />
+                <p>Automated assessment scoring</p>
+              </div>
+              <div class="mini-screenshot">
+                <img src="/screenshots/grading/tracking.png" alt="Progress Tracking" loading="lazy" />
+                <p>Progress tracking dashboard</p>
+              </div>
+              <div class="mini-screenshot">
+                <img src="/screenshots/grading/analytics.png" alt="Performance Analytics" loading="lazy" />
+                <p>Performance analytics</p>
+              </div>
+              <div class="mini-screenshot">
+                <img src="/screenshots/grading/rubric.png" alt="Custom Rubrics" loading="lazy" />
+                <p>Custom rubric creation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="screenshot-card">
+          <div class="screenshot-image main-screenshot">
+            <img src="/screenshots/parent-portal.png" alt="Parent Communication Portal" loading="lazy" />
+          </div>
+          <div class="screenshot-content">
+            <h3>Parent Portal</h3>
+            <p>Foster strong parent-teacher relationships with our communication platform.</p>
+            <div class="feature-screenshots">
+              <div class="mini-screenshot">
+                <img src="/screenshots/portal/updates.png" alt="Progress Updates" loading="lazy" />
+                <p>Real-time progress updates</p>
+              </div>
+              <div class="mini-screenshot">
+                <img src="/screenshots/portal/messaging.png" alt="Direct Messaging" loading="lazy" />
+                <p>Direct messaging system</p>
+              </div>
+              <div class="mini-screenshot">
+                <img src="/screenshots/portal/scheduling.png" alt="Event Scheduling" loading="lazy" />
+                <p>Event scheduling</p>
+              </div>
+              <div class="mini-screenshot">
+                <img src="/screenshots/portal/documents.png" alt="Document Sharing" loading="lazy" />
+                <p>Document sharing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="screenshot-card">
+          <div class="screenshot-image main-screenshot">
+            <img src="/screenshots/attendance.png" alt="Attendance Tracking System" loading="lazy" />
+          </div>
+          <div class="screenshot-content">
+            <h3>Attendance System</h3>
+            <p>Simplify attendance tracking with our digital system and analytics.</p>
+            <div class="feature-screenshots">
+              <div class="mini-screenshot">
+                <img src="/screenshots/attendance/tracking.png" alt="Digital Tracking" loading="lazy" />
+                <p>Digital attendance tracking</p>
+              </div>
+              <div class="mini-screenshot">
+                <img src="/screenshots/attendance/reports.png" alt="Automated Reports" loading="lazy" />
+                <p>Automated reports</p>
+              </div>
+              <div class="mini-screenshot">
+                <img src="/screenshots/attendance/notifications.png" alt="Absence Notifications" loading="lazy" />
+                <p>Absence notifications</p>
+              </div>
+              <div class="mini-screenshot">
+                <img src="/screenshots/attendance/patterns.png" alt="Attendance Patterns" loading="lazy" />
+                <p>Attendance patterns analysis</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-</Layout> 
+</Layout>
+
+<style>
+  .text-center {
+    text-align: center;
+  }
+
+  .section-header {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .section-description {
+    color: var(--subtext0);
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .video-showcase {
+    margin: 4rem 0;
+    padding: 0 2rem;
+  }
+
+  .video-container {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    background: var(--surface0);
+    border: 1px solid var(--surface1);
+  }
+
+  .video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(30, 30, 46, 0.2), rgba(30, 30, 46, 0.4));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .video-container:hover .video-overlay {
+    opacity: 1;
+  }
+
+  .play-button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+  }
+
+  .play-button:hover {
+    transform: scale(1);
+  }
+
+  .play-button span {
+    font-size: 2rem;
+  }
+
+  .feature-video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+  }
+
+  .screenshots-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin: 4rem 0;
+    padding: 0 2rem;
+  }
+
+  .screenshot-card {
+    background: var(--surface0);
+    border: 1px solid var(--surface1);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .screenshot-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--blue);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .screenshot-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+  }
+
+  .screenshot-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .screenshot-card:hover .screenshot-image img {
+    transform: scale(1.05);
+  }
+
+  .screenshot-content {
+    padding: 2rem;
+  }
+
+  .screenshot-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, var(--mauve), var(--blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .screenshot-content p {
+    color: var(--subtext0);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-screenshots {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .mini-screenshot {
+    background: var(--surface1);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .mini-screenshot:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .mini-screenshot img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 0.75rem 0.75rem 0 0;
+  }
+
+  .mini-screenshot p {
+    font-size: 0.8rem;
+    padding: 0.75rem;
+    margin: 0;
+    color: var(--subtext1);
+    text-align: center;
+  }
+
+  .main-screenshot {
+    border-bottom: 1px solid var(--surface1);
+  }
+
+  @media (max-width: 1200px) {
+    .screenshots-grid {
+      gap: 2rem;
+      padding: 0 1.5rem;
+    }
+    .feature-screenshots {
+      gap: 0.75rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .video-showcase {
+      margin: 3rem 0;
+      padding: 0 1rem;
+    }
+
+    .screenshots-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .screenshot-content {
+      padding: 1.5rem;
+    }
+
+    .feature-screenshots {
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+
+    .mini-screenshot p {
+      font-size: 0.75rem;
+      padding: 0.5rem;
+    }
+  }
+</style>
